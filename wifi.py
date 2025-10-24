@@ -8,9 +8,9 @@ import subprocess
 import threading
 import csv
 
-
+admin_chat_id='input here'
 channels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-IFACE = 'wlx1cbfce753f08'
+IFACE = 'input here'
 conf.iface = IFACE
 activeFlag = True
 
@@ -82,8 +82,8 @@ def handler(packet):
             if SSIDCounter == 0:
                 text = "Выберите сеть Wi-Fi, к которой вам разрешен доступ для сканирования." \
                 "Обращаем ваше внимание, что несанкционированный доступ к сети влечет за собой уголовную ответственность (статья 349 УК РБ и статья 272 УК РФ).\n"
-                first_message = start(chat_id=1077211564, text=text, message_id=None)
-            start(chat_id=1077211564, message_id = first_message.message_id, text=text+f"{SSIDCounter}. {name} ({mac}) CH:{channel}\n")
+                first_message = start(chat_id=admin_chat_id, text=text, message_id=None)
+            start(chat_id=admin_chat_id, message_id = first_message.message_id, text=text+f"{SSIDCounter}. {name} ({mac}) CH:{channel}\n")
             SSIDCounter += 1
             
 
