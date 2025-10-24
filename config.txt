@@ -1,0 +1,5 @@
+[parameters]
+cooldown=123.0
+amount=1000
+length=1700
+tim=1
