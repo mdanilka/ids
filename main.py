@@ -14,8 +14,8 @@ capture.sniff(timeout=60)
 cnt={}
 tm={}
 reply_id={}
-chat_id=1077211564
-BOT_TOKEN='6072039986:AAFzr1rgKSZQ8ZlzettJtqmqNJ6NTdXICAA'
+chat_id='input here'
+BOT_TOKEN='input here'
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
@@ -337,5 +337,5 @@ async def any(message):
         #    await message.answer(f'{message.text} is not in the whitelist')
 
 if __name__ == '__main__':
-    print(123)
     dp.run_polling(bot)
+
